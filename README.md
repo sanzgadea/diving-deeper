@@ -4,9 +4,8 @@
 
 **Accompanying Blog Post**: [Diving Deeper Blog Post](https://cs4245.notion.site/cs4245/Diving-Deeper-Improving-Generalization-and-Out-of-Sample-Detection-for-Deep-Sea-Species-Identificat-cf71d4f8c4ff47cab65dde6d5ad931eb)
 
----
 
----
+
 
 # Introduction
 
@@ -169,8 +168,7 @@ $$
 The predictions of species categories were evaluated based on the Mean Average Precision at 20 (MAP@20) metric. MAP@20 calculates the average precision for each image up to the top 20 predictions. The formula for MAP@20 is:
 
 $$
-MAP@20 =  \frac{1}{U} \sum_{u=1}^{U} \sum_{k=1}^{min(n,20)} P(k)\times rel(k)
-
+MAP@20 =  \frac{1}{U} \sum_{u=1}^{U} \sum_{k=1}^{min(n,20)} P(k) \times rel(k)
 $$
 
 In the formula, U represents the total number of images, P(k) denotes the precision at cutoff k, n represents the number of predictions per image, and rel(k) is an indicator function that equals 1 if the item at rank k is a relevant (correct) label, otherwise it is 0.
